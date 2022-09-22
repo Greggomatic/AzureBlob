@@ -12,7 +12,7 @@ jobs:
         with:
           source_dir: Lesson1-Notes
           container_name: www
-          connection_string: ${{ secrets.ConnectionString }}
+          connection_string: BlobEndpoint=https://githubbr.blob.core.windows.net/;QueueEndpoint=https://githubbr.queue.core.windows.net/;FileEndpoint=https://githubbr.file.core.windows.net/;TableEndpoint=https://githubbr.table.core.windows.net/;SharedAccessSignature=sv=2021-06-08&ss=bfqt&srt=c&sp=rwdlacupiytfx&se=2022-09-22T22:54:15Z&st=2022-09-22T14:54:15Z&spr=https&sig=P9dc5uSb1WUaUyedMXxqEx739sWmVKPEjeIIDcEUfZU%3D
           extra_args: '--pattern *.tar.gz'
           # WARNING: this will overwrite existing blobs in your blob storage
           overwrite: 'true'
